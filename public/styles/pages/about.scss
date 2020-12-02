@@ -1,0 +1,354 @@
+// innerFirst
+
+.innerFirst {
+  position: relative;
+  @media all and (max-width: 980px) {
+    &.deleteOnMobile {
+      display: none;
+    }
+  }
+  &Image {
+    font-size: 0;
+    height: calculateVw(571);
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &Title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: calculateVw(144);
+    line-height: 0.7;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+  }
+}
+
+// innerFirst
+
+// innerSecond
+
+.innerSecond {
+  @media all and (max-width: 980px) {
+    padding: 30px 0;
+    box-shadow: 0px 4px 72px rgba(0, 0, 0, 0.08);
+  }
+  @media all and (min-width: 981px) {
+    padding: calculateVw(182) 0 calculateVw(200);
+    box-shadow: 0px calculateVw(4) calculateVw(72) rgba(0, 0, 0, 0.08);
+  }
+  &In {
+    display: flex;
+    @media all and (max-width: 980px) {
+      flex-direction: column;
+    }
+    @media all and (min-width: 981px) {
+      align-items: center;
+    }
+  }
+  &Left {
+    @media all and (max-width: 980px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    @media all and (min-width: 981px) {
+      width: calc(100% - #{calculateVw(897)});
+    }
+  }
+  &Circles {
+    position: relative;
+    perspective: calculateVw(1000);
+    transform-style: preserve-3d;
+  }
+  &Circle {
+    border-radius: 50%;
+    transition: transform 1s linear;
+    @media all and (max-width: 980px) {
+      transform: translate(0) !important;
+    }
+    &.one {
+      margin-left: auto;
+      background: #c4c4c4 url("../images/user.png") 50% 50% / cover no-repeat;
+      @media all and (max-width: 980px) {
+        width: calc(100vw - 80px);
+        height: calc(100vw - 80px);
+        margin: 0 auto;
+      }
+      @media all and (min-width: 981px) {
+        width: calculateVw(368);
+        height: calculateVw(368);
+      }
+    }
+    &.two {
+      position: absolute;
+      top: 0;
+
+      border: calculateVw(4) solid #2fc6f5;
+      box-sizing: border-box;
+      @media all and (max-width: 980px) {
+        width: calc(100vw - 80px);
+        height: calc(100vw - 80px);
+        right: 30px;
+      }
+      @media all and (min-width: 981px) {
+        width: calculateVw(368);
+        height: calculateVw(368);
+        right: calculateVw(-21);
+      }
+    }
+    &.three {
+      width: calculateVw(262);
+      height: calculateVw(262);
+      position: absolute;
+      bottom: calculateVw(-122);
+      left: calculateVw(43);
+      z-index: -1;
+      background: url("../images/circle1.svg") 50% 50% / 120% no-repeat;
+    }
+    &.fourt {
+      width: calculateVw(217);
+      height: calculateVw(217);
+      position: absolute;
+      top: calculateVw(-43);
+      left: calculateVw(4);
+      z-index: -1;
+      background: var(--mainColor) url("../images/circle2.svg") 50% 50% / 165%
+        no-repeat;
+    }
+  }
+  &Right {
+    box-sizing: border-box;
+    @media all and (max-width: 980px) {
+      width: 100%;
+      padding: 0 30px;
+    }
+    @media all and (min-width: 981px) {
+      width: calculateVw(897);
+      padding: 0 calculateVw(139) 0 calculateVw(248);
+    }
+  }
+  &Title {
+    @media all and (max-width: 980px) {
+      margin-bottom: 30px;
+    }
+    @media all and (min-width: 981px) {
+      margin-bottom: calculateVw(50);
+    }
+  }
+  &Text {
+    @media all and (max-width: 980px) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    @media all and (min-width: 981px) {
+      margin-bottom: calculateVw(59);
+    }
+  }
+  &Button {
+    @media all and (max-width: 980px) {
+      text-align: center;
+    }
+  }
+}
+
+// innerSecond
+
+// innerThird
+
+.innerThird {
+  position: relative;
+  overflow: hidden;
+  @media all and (max-width: 980px) {
+    padding: 30px 0;
+  }
+  @media all and (min-width: 981px) {
+    padding: calculateVw(177) 0 calculateVw(199);
+  }
+  &Circle {
+    border-radius: 50%;
+    transition: transform 1s linear;
+    @media all and (max-width: 980px) {
+      transform: translate(0) !important;
+    }
+    &.one {
+      position: absolute;
+      top: calculateVw(385);
+      left: calculateVw(-84);
+      width: calculateVw(227);
+      height: calculateVw(227);
+      border: calculateVw(4) solid #c6dce3;
+      box-sizing: border-box;
+    }
+    &.two {
+      width: calculateVw(338);
+      height: calculateVw(338);
+      position: absolute;
+      top: calculateVw(111);
+      left: calculateVw(-124);
+      z-index: -1;
+      background: url("../images/circle3.svg") 50% 50% / 120% no-repeat;
+    }
+    &.three {
+      width: calculateVw(262);
+      height: calculateVw(262);
+      position: absolute;
+      top: calculateVw(364);
+      right: calculateVw(-147);
+      z-index: -1;
+      background: url("../images/circle1.svg") 50% 50% / 120% no-repeat;
+    }
+    &.four {
+      position: absolute;
+      top: calculateVw(515);
+      right: calculateVw(-261);
+      width: calculateVw(321);
+      height: calculateVw(321);
+      border: calculateVw(4) solid #2fc6f5;
+      box-sizing: border-box;
+    }
+  }
+  &In {
+    box-sizing: border-box;
+    @media all and (min-width: 981px) {
+      padding: 0 calculateVw(130);
+    }
+  }
+  &Title {
+    text-align: center;
+
+    @media all and (max-width: 980px) {
+      margin-bottom: 30px;
+    }
+    @media all and (min-width: 981px) {
+      margin-bottom: calculateVw(49);
+    }
+  }
+  &Subtitle {
+    text-align: center;
+    @media all and (max-width: 980px) {
+      width: calc(100% - 60px);
+      margin: 0 auto 30px;
+    }
+    @media all and (min-width: 981px) {
+      width: calculateVw(680);
+      margin: 0 auto calculateVw(79);
+    }
+  }
+  &Items {
+    display: flex;
+
+    position: relative;
+    @media all and (min-width: 701px) {
+      margin: 0 calc(#{calculateVw(-144)} / 2);
+    }
+    @media all and (max-width: 700px) {
+      display: block;
+    }
+  }
+  &Line {
+    @media all and (max-width: 980px) {
+      display: none;
+    }
+    @media all and (min-width: 981px) {
+      position: absolute;
+      bottom: calculateVw(-30);
+      left: calculateVw(130);
+      font-size: 0;
+      width: calculateVw(590);
+      transition: transform 1s linear;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  &Item {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    @media all and (min-width: 701px) {
+      width: calc(50% - #{calculateVw(144)});
+      margin: 0 calc(#{calculateVw(144)} / 2);
+    }
+    @media all and (max-width: 700px) {
+      width: 80vw;
+      margin: 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    .left {
+      font-weight: bold;
+
+      line-height: 0.8;
+      letter-spacing: -0.01em;
+      color: #000000;
+
+      position: relative;
+
+      @media all and (max-width: 980px) {
+        transform: translate(0) !important;
+      }
+      @media all and (min-width: 981px) {
+        transition: transform 1s linear;
+      }
+      @media all and (min-width: 701px) {
+        margin-right: calculateVw(41);
+        font-size: calculateVw(144);
+      }
+      @media all and (max-width: 700px) {
+        margin-right: 20px;
+        font-size: 50px;
+      }
+      .shadow {
+        position: absolute;
+
+        color: transparent;
+
+        -webkit-text-stroke-color: #2fc6f5;
+
+        @media all and (max-width: 980px) {
+          transform: translate(0) !important;
+          left: 5px;
+          bottom: 5px;
+          -webkit-text-stroke-width: 2px;
+        }
+        @media all and (min-width: 981px) {
+          transition: transform 1s linear;
+          left: calculateVw(-5);
+          bottom: calculateVw(-5);
+          -webkit-text-stroke-width: calculateVw(2);
+        }
+      }
+    }
+    .right {
+      line-height: 183.9%;
+      letter-spacing: 0.015em;
+      color: #000000;
+      @media all and (max-width: 980px) {
+        font-size: 12px;
+      }
+      @media all and (min-width: 981px) {
+        font-size: calculateVw(12);
+      }
+    }
+  }
+  &Button {
+    text-align: center;
+
+    @media all and (min-width: 701px) {
+      margin-top: calculateVw(73);
+    }
+    @media all and (max-width: 700px) {
+      margin-top: 40px;
+    }
+  }
+}
+
+// innerThird

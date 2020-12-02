@@ -1,0 +1,104 @@
+<svg width="590" height="84" viewBox="0 0 590 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+    <style>
+        path {
+            transform-origin: 50% 50%;
+            transform-box: fill-fox;
+        }
+    </style>
+</defs>
+<g clip-path="url(#clip0)">
+<path d="M584.789 0.68399C583.19 1.43274 581.59 2.16787 579.99 2.903L581.577 6.64673C583.19 5.9116 584.802 5.16285 586.402 4.4141L584.789 0.68399Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="8.4" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M9.97981 2.64432L8.39331 6.37444C9.99291 7.10957 11.5925 7.83109 13.1921 8.55261L14.7524 4.80887C13.1659 4.10097 11.5794 3.37945 9.97981 2.64432Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="8.1" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M565.502 9.32854C563.889 10.0228 562.263 10.7171 560.637 11.3978L562.119 15.1824C563.758 14.5017 565.384 13.8074 567.01 13.0995L565.502 9.32854Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="7.8" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M29.1879 11.1119L27.7063 14.8964C29.3321 15.5771 30.9579 16.2578 32.5969 16.9385L34.0523 13.1403C32.4264 12.4596 30.8137 11.7926 29.1879 11.1119Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="7.5" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M545.979 17.3742C544.34 18.0141 542.701 18.6539 541.062 19.2937L542.425 23.1191C544.077 22.4793 545.729 21.8395 547.368 21.186L545.979 17.3742Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="7.2" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M48.7109 18.994L47.3342 22.8194C48.9732 23.4592 50.6252 24.0854 52.2773 24.7117L53.6278 20.8726C51.9888 20.26 50.3499 19.6338 48.7109 18.994Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="6.9" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M526.22 24.8071C524.568 25.4061 522.902 25.9915 521.237 26.5769L522.496 30.4431C524.161 29.8577 525.84 29.2723 527.505 28.6733L526.22 24.8071Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="6.6" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M68.4438 26.2774L67.1851 30.1436C68.8502 30.729 70.5154 31.3008 72.1805 31.8726L73.413 27.9927C71.7479 27.4345 70.0958 26.8628 68.4438 26.2774Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="6.3" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M506.238 31.6275C504.559 32.172 502.894 32.703 501.216 33.2339L502.357 37.141C504.048 36.6101 505.726 36.0655 507.418 35.521L506.238 31.6275Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="6" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M88.3867 32.9479L87.2329 36.855C88.9112 37.386 90.5895 37.9169 92.2678 38.4342L93.3953 34.5135C91.7171 33.9962 90.0519 33.4789 88.3867 32.9479Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="5.7" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M486.138 37.808C484.46 38.2981 482.781 38.7746 481.09 39.251L482.126 43.199C483.817 42.7225 485.508 42.2324 487.2 41.7423L486.138 37.808Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="5.4" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M108.499 38.9924L107.464 42.9267C109.155 43.4032 110.846 43.8797 112.551 44.3425L113.56 40.3946C111.869 39.9453 110.178 39.4689 108.499 38.9924Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="5.1" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M465.88 43.3487C464.189 43.7844 462.497 44.22 460.793 44.642L461.711 48.6172C463.415 48.1952 465.12 47.7595 466.824 47.3239L465.88 43.3487Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="4.8" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M128.783 44.4108L127.865 48.3859C129.57 48.8079 131.274 49.23 132.992 49.652L133.884 45.6768C132.179 45.2548 130.475 44.8328 128.783 44.4108Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="4.5" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M445.479 48.2769C443.775 48.658 442.07 49.0392 440.352 49.4068L441.152 53.4092C442.87 53.0416 444.587 52.6604 446.305 52.2793L445.479 48.2769Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="4.2" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M149.211 49.2025L148.398 53.2049C150.116 53.5861 151.833 53.9537 153.551 54.3076L154.337 50.3052C152.633 49.9377 150.915 49.5701 149.211 49.2025Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="3.9" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M424.946 52.5516C423.229 52.8783 421.511 53.2051 419.793 53.5182L420.488 57.5342C422.219 57.2211 423.95 56.8943 425.667 56.554L424.946 52.5516Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="3.6" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M169.77 53.3547L169.075 57.3707C170.806 57.6974 172.536 58.0106 174.267 58.3101L174.936 54.2804C173.205 53.9809 171.487 53.6678 169.77 53.3547Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="3.3" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M404.309 56.2C402.591 56.4723 400.861 56.7446 399.13 57.0168L399.707 61.0601C401.451 60.7878 403.181 60.5155 404.912 60.2432L404.309 56.2Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="3" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M190.434 56.867L189.857 60.9102C191.587 61.1825 193.331 61.4412 195.075 61.6998L195.626 57.6566C193.895 57.3979 192.164 57.1393 190.434 56.867Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="2.7" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M383.553 59.2086C381.823 59.4401 380.092 59.6443 378.361 59.8621L378.82 63.9189C380.564 63.7011 382.308 63.4833 384.051 63.2655L383.553 59.2086Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="2.4" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M211.189 59.7395L210.73 63.7964C212.474 64.0142 214.218 64.2184 215.962 64.4226L216.394 60.3658C214.664 60.1616 212.933 59.9574 211.189 59.7395Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="2.1" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M362.745 61.5774C361.001 61.7544 359.271 61.9177 357.527 62.0675L357.868 66.1379C359.612 65.9746 361.369 65.8112 363.112 65.6478L362.745 61.5774Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="1.8" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M232.023 61.9857L231.682 66.0562C233.426 66.2195 235.183 66.3693 236.927 66.519L237.241 62.4486C235.498 62.2988 233.767 62.1491 232.023 61.9857Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="1.5" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M341.859 63.3064C340.115 63.4289 338.371 63.5379 336.627 63.6468L336.85 67.7308C338.607 67.6219 340.351 67.513 342.108 67.3905L341.859 63.3064Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="1.2" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M252.91 63.5923L252.674 67.6763C254.418 67.7852 256.175 67.8805 257.932 67.9758L258.128 63.8918C256.398 63.7965 254.654 63.7012 252.91 63.5923Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="0.9" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M320.946 64.409C319.202 64.4771 317.458 64.5315 315.714 64.586L315.832 68.67C317.589 68.6156 319.346 68.5611 321.09 68.4931L320.946 64.409Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="0.6" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M273.836 64.5587L273.718 68.6428C275.462 68.6972 277.219 68.7381 278.962 68.7789L279.054 64.6949C277.323 64.654 275.58 64.6132 273.836 64.5587Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="0.3" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+<path d="M300.006 64.8718C298.42 64.8854 296.847 64.8854 295.26 64.8854H294.775V68.9695H295.26C296.86 68.9695 298.459 68.9695 300.046 68.9559L300.006 64.8718Z" fill="#C6DCE3">
+    <animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="xml" attributeName="transform" type="translate" dur="1s" begin="0" values="0, 0; 0, 2; 0, -2; 0, 0;" repeatCount="indefinite"/>
+</path>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="590" height="83.5293" fill="white" transform="matrix(1 0 0 -1 0 83.5293)"/>
+</clipPath>
+</defs>
+</svg>

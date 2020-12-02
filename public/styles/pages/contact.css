@@ -1,0 +1,338 @@
+.innerForm {
+  position: relative;
+  overflow: hidden; }
+
+.innerForm:not(.noShadow) {
+  box-shadow: 0px 4px 72px rgba(0, 0, 0, 0.08); }
+
+@media all and (max-width: 980px) {
+  .innerForm {
+    padding: 30px 0; } }
+
+@media all and (min-width: 981px) {
+  .innerForm {
+    padding: calculateVw(178) 0 calculateVw(200); } }
+
+@media all and (min-width: 981px) {
+  .innerForm .cv {
+    display: flex; } }
+
+.innerForm .cv textarea {
+  background: #f8fcfd;
+  box-sizing: border-box;
+  outline: none;
+  width: 100%; }
+
+@media all and (max-width: 980px) {
+  .innerForm .cv textarea {
+    height: 100px;
+    border: 2px solid #c6dce3;
+    border-radius: 5px;
+    padding: 15px; } }
+
+@media all and (min-width: 981px) {
+  .innerForm .cv textarea {
+    height: calculateVw(260);
+    width: calculateVw(400);
+    border: calculateVw(2) solid #c6dce3;
+    border-radius: calculateVw(15);
+    padding: calculateVw(30);
+    margin: 0 0 calculateVw(30) 0;
+    box-sizing: border-box; } }
+
+.innerForm .cv .file {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+@media all and (min-width: 981px) {
+  .innerForm .cv .file {
+    width: calc(100% - calculateVw(400));
+    padding-left: calculateVw(30); } }
+
+.innerForm .cv .file .title {
+  font-weight: normal !important;
+  line-height: 183.9%;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: #667d85; }
+
+@media all and (max-width: 980px) {
+  .innerForm .cv .file .title {
+    font-size: 25px;
+    margin-bottom: 30px; } }
+
+@media all and (min-width: 981px) {
+  .innerForm .cv .file .title {
+    font-size: calculateVw(14) !important;
+    margin-bottom: calculateVw(32); } }
+
+.innerForm .cv .file .upload {
+  background: #f8fcfd; }
+
+@media all and (max-width: 980px) {
+  .innerForm .cv .file .upload {
+    border: 2px solid #c6dce3;
+    border-radius: 5px;
+    padding: 15px; } }
+
+@media all and (min-width: 981px) {
+  .innerForm .cv .file .upload {
+    height: calculateVw(190);
+    border: calculateVw(2) solid #c6dce3;
+    border-radius: calculateVw(15);
+    padding: calculateVw(30);
+    margin: 0 0 calculateVw(30) 0;
+    box-sizing: border-box; } }
+
+@media all and (max-width: 980px) {
+  .innerForm .cv .file .upload .image {
+    width: 30%;
+    margin: 0 auto 20px; } }
+
+@media all and (min-width: 981px) {
+  .innerForm .cv .file .upload .image {
+    width: calculateVw(78);
+    margin: 0 auto calculateVw(20); } }
+
+.innerForm .cv .file .upload .text {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #c6dce3; }
+
+@media all and (max-width: 980px) {
+  .innerForm .cv .file .upload .text {
+    font-size: 13px; } }
+
+@media all and (min-width: 981px) {
+  .innerForm .cv .file .upload .text {
+    font-size: calculateVw(14);
+    line-height: calculateVw(17); } }
+
+.innerForm .cv .file .upload input {
+  display: none; }
+
+.innerFormCircle {
+  border-radius: 50%;
+  transition: transform 1s linear; }
+
+@media all and (max-width: 980px) {
+  .innerFormCircle {
+    transform: translate(0) !important; } }
+
+.innerFormCircle.one {
+  position: absolute;
+  top: calculateVw(443);
+  left: calculateVw(-202);
+  width: calculateVw(335);
+  height: calculateVw(335);
+  border: calculateVw(4) solid #2fc6f5;
+  box-sizing: border-box; }
+
+.innerFormCircle.two {
+  width: calculateVw(381);
+  height: calculateVw(381);
+  position: absolute;
+  top: calculateVw(577);
+  left: calculateVw(-181);
+  z-index: -1;
+  background: url("../images/circle1.svg") 50% 50%/120% no-repeat; }
+
+.innerFormCircle.three {
+  width: calculateVw(326);
+  height: calculateVw(326);
+  position: absolute;
+  top: calculateVw(469);
+  right: calculateVw(-197);
+  z-index: 5;
+  background: var(--mainColor) url("../images/circle2.svg") 50% 50%/165% no-repeat; }
+
+.innerFormCircle.four {
+  position: absolute;
+  top: calculateVw(523);
+  right: calculateVw(-203);
+  width: calculateVw(335);
+  height: calculateVw(335);
+  border: calculateVw(4) solid #c6dce3;
+  box-sizing: border-box;
+  z-index: 6; }
+
+.innerFormTitle {
+  text-align: center; }
+
+@media all and (max-width: 980px) {
+  .innerFormTitle {
+    margin-bottom: 20px; } }
+
+@media all and (min-width: 981px) {
+  .innerFormTitle {
+    margin-bottom: calculateVw(35); } }
+
+.innerFormSubtitle {
+  text-align: center; }
+
+@media all and (max-width: 980px) {
+  .innerFormSubtitle {
+    margin-bottom: 30px; } }
+
+@media all and (min-width: 981px) {
+  .innerFormSubtitle {
+    margin-bottom: calculateVw(80); } }
+
+.innerForm form {
+  margin: 0 auto; }
+
+@media all and (max-width: 980px) {
+  .innerForm form {
+    width: 80vw; } }
+
+@media all and (min-width: 981px) {
+  .innerForm form {
+    width: calculateVw(600); } }
+
+.innerForm input[type="text"],
+.innerForm input[type="email"],
+.innerForm input[type="phone"] {
+  background: #f8fcfd;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  width: 100%; }
+
+@media all and (max-width: 980px) {
+  .innerForm input[type="text"],
+  .innerForm input[type="email"],
+  .innerForm input[type="phone"] {
+    height: 30px;
+    border: 2px solid #c6dce3;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin: 0 0 15px 0; } }
+
+@media all and (min-width: 981px) {
+  .innerForm input[type="text"],
+  .innerForm input[type="email"],
+  .innerForm input[type="phone"] {
+    height: calculateVw(50);
+    border: calculateVw(2) solid #c6dce3;
+    border-radius: calculateVw(15);
+    padding: 0 calculateVw(30);
+    margin: 0 0 calculateVw(30) 0; } }
+
+@media all and (max-width: 980px) and (min-width: 701px) {
+  .innerFormGroup input[type="text"],
+  .innerFormGroup input[type="email"],
+  .innerFormGroup input[type="phone"] {
+    margin: 0 7.5px !important; } }
+
+@media all and (min-width: 981px) {
+  .innerFormGroup input[type="text"],
+  .innerFormGroup input[type="email"],
+  .innerFormGroup input[type="phone"] {
+    margin: 0 calculateVw(15) !important; } }
+
+@media all and (min-width: 701px) {
+  .innerFormGroup {
+    display: flex; } }
+
+@media all and (max-width: 980px) and (min-width: 701px) {
+  .innerFormGroup {
+    margin: 0 -7.5px 15px; } }
+
+@media all and (min-width: 981px) {
+  .innerFormGroup {
+    margin: 0 calculateVw(-15) calculateVw(30); } }
+
+.innerFormCheckboxes {
+  display: flex;
+  flex-wrap: wrap; }
+
+@media all and (max-width: 980px) {
+  .innerFormCheckboxes {
+    margin-top: 30px; } }
+
+@media all and (min-width: 981px) {
+  .innerFormCheckboxes {
+    margin-top: calculateVw(40); } }
+
+.innerFormCheckbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+
+@media all and (min-width: 701px) {
+  .innerFormCheckbox {
+    width: 50%; } }
+
+@media all and (min-width: 701px) and (max-width: 980px) {
+  .innerFormCheckbox:nth-child(n + 3) {
+    margin-top: 12px; } }
+
+@media all and (min-width: 701px) and (min-width: 981px) {
+  .innerFormCheckbox:nth-child(n + 3) {
+    margin-top: calculateVw(20); } }
+
+@media all and (max-width: 700px) {
+  .innerFormCheckbox {
+    width: 100%; }
+  .innerFormCheckbox:not(:last-child) {
+    margin-bottom: 10px; } }
+
+.innerFormCheckbox input {
+  display: none; }
+
+.innerFormCheckbox .phantom {
+  background: #f8fcfd;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  position: relative; }
+
+@media all and (max-width: 980px) {
+  .innerFormCheckbox .phantom {
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #c6dce3; } }
+
+@media all and (min-width: 981px) {
+  .innerFormCheckbox .phantom {
+    border-radius: calculateVw(7);
+    margin-right: calculateVw(10);
+    width: calculateVw(30);
+    height: calculateVw(30);
+    border: calculateVw(2) solid #c6dce3; } }
+
+.innerFormCheckbox input:checked + .phantom {
+  background: #c6dce3; }
+
+@media all and (max-width: 980px) {
+  .innerFormCheckbox input:checked + .phantom {
+    box-shadow: inset 0 0 1px 2px #fff; } }
+
+@media all and (min-width: 981px) {
+  .innerFormCheckbox input:checked + .phantom {
+    box-shadow: inset 0 0 calculateVw(3) calculateVw(3) #fff; } }
+
+.innerFormCheckbox span {
+  letter-spacing: -0.005em;
+  color: #000000; }
+
+@media all and (max-width: 980px) {
+  .innerFormCheckbox span {
+    font-size: 13px;
+    padding-right: 10px; } }
+
+@media all and (min-width: 981px) {
+  .innerFormCheckbox span {
+    font-size: calculateVw(13);
+    line-height: calculateVw(16); } }
+
+.innerFormButton {
+  text-align: center;
+  margin-top: calculateVw(60); }
+
+.innerFormButton button {
+  border: none;
+  cursor: pointer; }
