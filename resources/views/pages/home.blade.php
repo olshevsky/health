@@ -14,7 +14,7 @@
                     to fit within your budget.
                 </div>
                 <div class="firstButton">
-                    <a href="{{ route('contact') }}" class="button">Contact us now</a>
+                    <a href="{{ route('contact') }}#form" class="button">Contact us now</a>
                 </div>
             </div>
             <div class="firstRight">
@@ -100,7 +100,7 @@
                     price you can afford.
                 </div>
                 <div class="fourthButton">
-                    <a href="{{ route('contact') }}" class="button">Contact us now</a>
+                    <a href="{{ route('contact') }}#form" class="button">Contact us now</a>
                 </div>
             </div>
             <div class="fourthRight">

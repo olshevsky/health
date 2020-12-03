@@ -24,7 +24,7 @@
                 <div class="innerSecondText text">Compass Health Consultants serves in an advisory role with our health insurance clients.<br />
                     We represent the most stable and highest rated companies in the insurance industry. Names like United Healthcare, Aetna, Blue Cross & Blue Shield, and Mutual of Omaha.  Because we are independent, we can direct you to the health plans the best meet your needs and budget.  All of our consultations are done over the telephone and online, and no agent will ever ask to visit your home. </div>
                 <div class="innerSecondButton">
-                    <a href="{{ route('contact') }}" class="button">Contact us now</a>
+                    <a href="{{ route('contact') }}#form" class="button">Contact us now</a>
                 </div>
             </div>
         </div>

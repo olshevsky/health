@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CareerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +16,9 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/career', [HomeController::class, 'career'])->name('career');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::post('/contact/send', [HomeController::class, 'sendContact'])->name('sendContact');
-
-/*
-Route::get('/', function (){
-    return view('welcome');
-});
-*/
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/career', [CareerController::class, 'index'])->name('career');
+Route::post('/career/apply', [CareerController::class, 'send'])->name('careerApply');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact/send', [ContactController::class, 'send'])->name('sendContact');
