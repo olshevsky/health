@@ -6,14 +6,19 @@
         <title>@yield('title')</title>
         <link rel="stylesheet" href="/styles/main.css">
         <style>
-            .innerForm input.error{
-                color: #000;
-                border-color: #ff000061;
-            }
+            /*To do - move to SCSS*/
             .innerForm p.errorMessage{
-                color: #ff0000;
                 padding: 0 0;
                 margin: -20px 0 20px 0;
+            }
+
+            .alert.alert-danger ul li{
+                margin-top: 1em;
+            }
+
+            .alert.alert-danger ul li,
+            .innerForm p.errorMessage{
+                color: #ff0000;
                 font-size: .9em;
             }
 
