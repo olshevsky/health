@@ -11,14 +11,18 @@ class JobApplication extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $data = null;
+    private $attachmentFile = null;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data, $attachmentFile = null)
     {
-        //
+        $this->data = $data;
+        $this->attachmentFile = $attachmentFile;
     }
 
     /**
@@ -28,13 +32,18 @@ class JobApplication extends Mailable
      */
     public function build()
     {
-        return $this->to('dad')
-                    ->from('da')
-                    ->with(['data' => 1])
-                    ->view('emails.job_application')
-                    ->attach('/path/to/file', [
-                        'as' => 'name.pdf',
-                        'mime' => 'application/pdf'
-                    ]);
+        if($this->attachmentFile){
+            return $this->from($this->data['email'])
+                ->with($this->data)
+                ->view('emails.job_application')
+                ->attachData($this->attachmentFile, 'tezt.pdf', [
+                    'mime' => 'application/pdf',
+                ]);
+        }
+        else{
+            return $this->from($this->data['email'])
+                ->with($this->data)
+                ->view('emails.job_application');
+        }
     }
 }

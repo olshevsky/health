@@ -8,7 +8,8 @@
     @endisset
     <p>E-mail: {{ $email }}</p>
     <p>Phone number: {{ $phone }}</p>
-    @isset($subjects)
-        <p>{{ info }}}</p>
+    @isset($info)
+        <p>Additional information:</p>
+        <p>{{ $info }}</p>
     @endisset
 </div>

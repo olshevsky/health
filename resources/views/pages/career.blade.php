@@ -142,16 +142,26 @@
         <div class="innerFormIn center">
             <div class="innerFormTitle title">Job Application</div>
             <div class="innerFormSubtitle text">Please share some information and connect with our recruiters to learn more today.</div>
-            <form action="#">
+            <form action="{{ route('careerApply') }}" method="POST" enctype="multipart/form-data">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @csrf
                 <div class="innerFormGroup">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="First Name" name="name" value="{{ old('name') }}">
+                    <input type="text" placeholder="Last Name" name="lastName" value="{{ old('lastName') }}">
                 </div>
-                <input type="email" placeholder="Email">
-                <input type="phone" placeholder="Phone Number">
-                <input type="text" placeholder="Zipcode">
+                <input type="email" placeholder="Email" name="email" value="{{ old('email') }}">
+                <input type="phone" placeholder="Phone Number" name="phone" value="{{ old('phone') }}">
+                <input type="text" placeholder="Zipcode" name="zip" value="{{ old('zip') }}">
                 <div class="cv">
-                    <textarea placeholder="Adittional Information" name="" id="" cols="30" rows="10"></textarea>
+                    <textarea placeholder="Adittional Information" name="info" id="info" cols="30" rows="10">{{ old('info') }}</textarea>
                     <div class="file">
                         <div class="title">Upload your CV</div>
                         <label class="upload">
@@ -160,12 +170,12 @@
                             </div>
                             <div class="text">Drop your files
                                 here</div>
-                            <input type="file">
+                            <input type="file" id="cv" name="cv">
                         </label>
                     </div>
                 </div>
                 <div class="innerFormButton">
-                    <button class="button">Submit   </button>
+                    <button class="button">Submit</button>
                 </div>
             </form>
         </div>
