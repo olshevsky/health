@@ -14,11 +14,10 @@
         <div class="innerFormCircle two translateOnMouseMove" data-animateSpeed="10"></div>
         <div class="innerFormCircle three translateOnMouseMove" data-animateSpeed="14"></div>
         <div class="innerFormCircle four translateOnMouseMove" data-animateSpeed="22"></div>
-        <div class="innerFormIn center">
+        <div class="innerFormIn center" id="form">
             <div class="innerFormTitle title">Explore Your Options</div>
             <div class="innerFormSubtitle text">Please share some brief information so that we may better serve you.</div>
-            <form action="{{ route('sendContact') }}" method="POST">
-
+            <form action="{{ route('sendContact') }}" method="POST" enctype="multipart/form-data">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -28,15 +27,14 @@
                         </ul>
                     </div>
                 @endif
-
                 @csrf
                 <div class="innerFormGroup">
-                    <input type="text" name="name" placeholder="First Name">
-                    <input type="text" name="lastName" placeholder="Last Name">
+                    <input type="text" name="name" value="{{ old('name') }}" placeholder="First Name">
+                    <input type="text" name="lastName" value="{{ old('lastName') }}" placeholder="Last Name">
                 </div>
-                <input type="email" name="email" placeholder="Email">
-                <input type="phone" name="phone" placeholder="Phone Number">
-                <input type="text" name="zip" placeholder="Zipcode">
+                <input type="email" name="email" value="{{ old('email') }}" placeholder="Email">
+                <input type="phone" name="phone" value="{{ old('phone') }}" placeholder="Phone Number">
+                <input type="text" name="zip" value="{{ old('zip') }}" placeholder="Zipcode">
                 <div class="innerFormCheckboxes">
                     <label class="innerFormCheckbox">
                         <input type="checkbox" name="topic">

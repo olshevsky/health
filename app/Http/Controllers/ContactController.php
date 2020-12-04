@@ -30,6 +30,6 @@ class ContactController extends Controller
             ->send(new Contact($request->all()));
         //->queue(new Contact($request->all()));
 
-        return redirect('contact#form');
+        return redirect('/contact');
     }
 }
