@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Health Insurance Results - Contact U')
+@section('title', 'Health Insurance Results - Contact Us')
 
 @section('content')
     <section class="innerFirst">
@@ -17,75 +17,40 @@
         <div class="innerFormIn center" id="form">
             <div class="innerFormTitle title">Explore Your Options</div>
             <div class="innerFormSubtitle text">Please share some brief information so that we may better serve you.</div>
-            <form action="{{ route('sendContact') }}" method="POST" enctype="multipart/form-data">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+            <form @submit="checkForm" action="{{ route('sendContact') }}" method="POST">
                 @csrf
                 <div class="innerFormGroup">
-                    <input type="text" name="name" value="{{ old('name') }}" placeholder="First Name">
-                    <input type="text" name="lastName" value="{{ old('lastName') }}" placeholder="Last Name">
+                    <input type="text" name="name" v-model="form.name" placeholder="First Name">
+                    <input type="text" name="lastName" v-model="form.lastName" placeholder="Last Name">
                 </div>
-                <input type="email" name="email" value="{{ old('email') }}" placeholder="Email">
-                <input type="phone" name="phone" value="{{ old('phone') }}" placeholder="Phone Number">
-                <input type="text" name="zip" value="{{ old('zip') }}" placeholder="Zipcode">
+                <input type="email" name="email" v-model="form.email" :class="[errors.email ? 'error' : '']" placeholder="Email">
+                <p v-if="errors.email" class="errorMessage">Incorrect email adress!</p>
+                <input type="phone" name="phone" v-model="form.phone" :class="[errors.phone ? 'error' : '']"  placeholder="Phone Number">
+                <p v-if="errors.phone" class="errorMessage">Incorrect phone number!</p>
+                <input type="text" name="zip" v-model="form.zip" placeholder="Zipcode">
                 <div class="innerFormCheckboxes">
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox" name="topic">
-                        <div class="phantom"></div>
-                        <span>Health Insurance</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>Dental/Vision</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>Group Health Insurance - Business</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>Accident/Disability</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>Medicare Supplements</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>Cancer</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>Long Term Care</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>Life Insurance</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>Prescription Coverage</span>
-                    </label>
-                    <label class="innerFormCheckbox">
-                        <input type="checkbox">
-                        <div class="phantom"></div>
-                        <span>International Health Insurance</span>
-                    </label>
+                    @foreach ($subjects as $id => $subject)
+                        <label class="innerFormCheckbox">
+                            <input type="checkbox" name="subjects{{ $id }}" v-model="form.subjects" value="{{ $subject }}">
+                            <div class="phantom"></div>
+                            <span>{{ $subject }}</span>
+                        </label>
+                    @endforeach
+                </div>
+                <div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
+                <div class="innerFormIn">
+                    <p v-if="status === 'ok'" class="statusMessage success">Your message has been sent successfully!</p>
+                    <p v-if="status === 'fail'" class="statusMessage fail">Something went wrong!</p>
                 </div>
                 <div class="innerFormButton">
                     <button class="button">Submit</button>
@@ -126,3 +91,82 @@
         </div>
     </section>
 @endsection
+
+@push('custom-scripts')
+    <script>
+        let contactForm = new Vue({
+            el: '#form',
+            data: {
+                errors: {
+                    email: false,
+                    phone: false
+                },
+                isValid: false,
+                status: null,
+                form: {
+                    name: null,
+                    lastName: null,
+                    email: null,
+                    phone: null,
+                    zip: null,
+                    subjects: [],
+                    _token: "{{ csrf_token() }}",
+                },
+            },
+            methods: {
+                checkForm: function(e){
+                    e.preventDefault();
+                    this.resetErrors();
+
+                    if (!this.validEmail(this.form.email)){
+                        this.errors.email = true;
+                        return;
+                    }
+
+                    if(!this.validPhone(this.form.phone)){
+                        this.errors.phone = true;
+                        return;
+                    }
+
+                    let self = this;
+                    axios.post('{{ route("sendContact") }}', this.form)
+                        .then((res) => {
+                            if(res.data.status === 'ok'){
+                                self.status = 'ok';
+                            }
+                            self.resetErrors();
+                            self.clearForm();
+                        })
+                        .catch((error) => {
+                            self.status = 'fail';
+                        }).finally(() => {});
+                },
+                resetErrors: function() {
+                    this.errors = {
+                        email: false,
+                        phone: false
+                    }
+                },
+                clearForm: function(){
+                     this.form = {
+                        name: null,
+                        lastName: null,
+                        email: null,
+                        phone: null,
+                        zip: null,
+                        subjects: [],
+                        _token: "{{ csrf_token() }}",
+                     }
+                },
+                validEmail: function (email) {
+                    let reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return reg.test(email);
+                },
+                validPhone: function(phone){
+                    let reg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+                    return reg.test(phone);
+                }
+            }
+        });
+    </script>
+@endpush
