@@ -19,28 +19,31 @@ class CareerController extends Controller
     public function send(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'nullable|string|max:255',
-            'lastName' => 'nullable|string|max:255',
+            //'name' => 'nullable|string|max:255',
+            //'lastName' => 'nullable|string|max:255',
             'email' => 'required|email',
             'phone' => 'required',
-            'zip' => 'nullable|regex:/\b\d{5}\b/',
-            'info' => 'nullable|string',
-            'cv' => 'nullable|file|mimes:pdf,doc,docx,txt'
+            //'zip' => 'nullable|regex:/\b\d{5}\b/',
+            //'info' => 'nullable|string',
+            'file' => 'nullable|file|mimes:pdf,doc,docx,txt'
         ]);
 
-        if ($request->hasFile('cv')) {
-            $file = $request->file('cv');
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
             $fileName = $this->cvPrefix .now()->timestamp .'-' .$file->getClientOriginalName();
             $file->move($this->cvFolder, $fileName);
         }
         else{
             $file = null;
+            $fileName = null;
         }
 
         Mail::to(config('mail.mailto'))
             ->send(new JobApplication($request->all(), $file, $fileName));
-            //->queue(new JobApplication($request->all(), $file));
+            //->queue(new JobApplication($request->all(), $file, $fileName));
 
-        return redirect('/career');
+        return response()->json([
+            'status' => 'ok'
+        ], 200);
     }
 }

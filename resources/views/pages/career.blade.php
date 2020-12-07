@@ -142,26 +142,19 @@
         <div class="innerFormIn center">
             <div class="innerFormTitle title">Job Application</div>
             <div class="innerFormSubtitle text">Please share some information and connect with our recruiters to learn more today.</div>
-            <form action="{{ route('careerApply') }}" method="POST" enctype="multipart/form-data">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+            <form id="form" @submit="checkForm" action="{{ route('careerApply') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="innerFormGroup">
-                    <input type="text" placeholder="First Name" name="name" value="{{ old('name') }}">
-                    <input type="text" placeholder="Last Name" name="lastName" value="{{ old('lastName') }}">
+                    <input type="text" name="name" v-model="form.name" placeholder="First Name">
+                    <input type="text" name="lastName" v-model="form.lastName" placeholder="Last Name">
                 </div>
-                <input type="email" placeholder="Email" name="email" value="{{ old('email') }}">
-                <input type="phone" placeholder="Phone Number" name="phone" value="{{ old('phone') }}">
-                <input type="text" placeholder="Zipcode" name="zip" value="{{ old('zip') }}">
+                <input type="email" name="email" v-model="form.email" :class="[errors.email ? 'error' : '']" placeholder="Email">
+                <p v-if="errors.email" class="errorMessage">Incorrect email adress!</p>
+                <input type="phone" name="phone" v-model="form.phone" :class="[errors.phone ? 'error' : '']"  placeholder="Phone Number">
+                <p v-if="errors.phone" class="errorMessage">Incorrect phone number!</p>
+                <input type="text" name="zip" v-model="form.zip" placeholder="Zipcode">
                 <div class="cv">
-                    <textarea placeholder="Adittional Information" name="info" id="info" cols="30" rows="10">{{ old('info') }}</textarea>
+                    <textarea v-model="form.info"  placeholder="Adittional Information" name="info" id="info" cols="30" rows="10"></textarea>
                     <div class="file">
                         <div class="title">Upload your CV</div>
                         <label class="upload">
@@ -170,9 +163,24 @@
                             </div>
                             <div class="text">Drop your files
                                 here</div>
-                            <input type="file" id="cv" name="cv">
+                            <input ref="file" v-on:change="handleFileUpload()" type="file" id="file" name="file">
                         </label>
                     </div>
+                </div>
+                <div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
+                <div class="innerFormIn">
+                    <p v-if="status === 'ok'" class="statusMessage success">Your message has been sent successfully!</p>
+                    <p v-if="status === 'fail'" class="statusMessage fail">Something went wrong!</p>
                 </div>
                 <div class="innerFormButton">
                     <button class="button">Submit</button>
@@ -181,3 +189,101 @@
         </div>
     </section>
 @endsection
+
+@push('custom-scripts')
+    <script>
+        let contactForm = new Vue({
+            el: '#form',
+            data: {
+                errors: {
+                    email: false,
+                    phone: false
+                },
+                isValid: false,
+                status: null,
+                form: {
+                    name: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    zip: '',
+                    info: '',
+                    file: '',
+                    _token: "{{ csrf_token() }}",
+                },
+            },
+            methods: {
+                handleFileUpload: function(){
+                    this.form.file = this.$refs.file.files[0];
+                },
+                checkForm: function(e){
+                    e.preventDefault();
+                    this.resetErrors();
+
+                    if (!this.validEmail(this.form.email)){
+                        this.errors.email = true;
+                        return;
+                    }
+
+                    if(!this.validPhone(this.form.phone)){
+                        this.errors.phone = true;
+                        return;
+                    }
+
+                    let self = this;
+                    let formData = new FormData();
+                        formData.append('name', this.form.name);
+                        formData.append('lastName', this.form.lastName);
+                        formData.append('email', this.form.email);
+                        formData.append('phone', this.form.phone);
+                        formData.append('zip', this.form.zip);
+                        formData.append('info', this.form.info);
+                        formData.append('file', this.form.file);
+                        formData.append('_token', "{{ csrf_token() }}");
+
+                    axios.post('{{ route("careerApply") }}', formData, {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        })
+                        .then((res) => {
+                            if(res.data.status === 'ok'){
+                                self.status = 'ok';
+                            }
+                            self.resetErrors();
+                            self.clearForm();
+                        })
+                        .catch((error) => {
+                            self.status = 'fail';
+                        }).finally(() => {});
+                },
+                resetErrors: function() {
+                    this.errors = {
+                        email: false,
+                        phone: false
+                    }
+                },
+                clearForm: function(){
+                    this.form = {
+                        name: null,
+                        lastName: null,
+                        email: null,
+                        phone: null,
+                        zip: null,
+                        subjects: [],
+                        _token: "{{ csrf_token() }}",
+                    }
+                },
+
+                validEmail: function (email) {
+                    let reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return reg.test(email);
+                },
+                validPhone: function(phone){
+                    let reg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+                    return reg.test(phone);
+                }
+            }
+        });
+    </script>
+@endpush

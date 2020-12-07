@@ -20,7 +20,7 @@ class JobApplication extends Mailable
      *
      * @return void
      */
-    public function __construct($data, $attachmentFile = null, $attachmentName =null)
+    public function __construct($data, $attachmentFile = null, $attachmentName = null)
     {
         $this->data = $data;
         $this->attachmentFile = $attachmentFile;

@@ -1,15 +1,20 @@
 <div>
     <h1>New e-mail from Health Insurance Results job application form.</h1>
-    @isset($name)
+    @if ($name != '')
         <p>First name: {{ $name }}</p>
-    @endisset
-    @isset($lastName)
+    @endif
+    @if ($lastName != '')
         <p>Last name: {{ $lastName }}</p>
-    @endisset
+    @endif
     <p>E-mail: {{ $email }}</p>
     <p>Phone number: {{ $phone }}</p>
-    @isset($info)
+    @if ($zip != '')
+        <p>Zip code: {{ $zip }}</p>
+    @endif
+    @if ($info != '')
         <p>Additional information:</p>
         <p>{{ $info }}</p>
-    @endisset
+    @endif
 </div>
+
+

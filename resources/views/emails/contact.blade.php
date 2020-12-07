@@ -8,6 +8,9 @@
     @endisset
     <p>E-mail: {{ $email }}</p>
     <p>Phone number: {{ $phone }}</p>
+    @isset($zip)
+        <p>Zip code: {{ $zip }}</p>
+    @endif
     @isset($subjects)
         <p>Subjects: </p>
         <ul>
