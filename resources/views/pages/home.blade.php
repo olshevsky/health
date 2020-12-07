@@ -376,11 +376,10 @@
 
 @push('custom-scripts')
     <script>
-        $( document ).ready(function() {
-            var video = document.getElementById('video');
-            document.addEventListener('mousemove', function() {
-                video.play();
-            });
+        var video = document.getElementById('video');
+        document.addEventListener('mousemove', function() {
+            video.play();
         });
+        console.log(video);
     </script>
 @endpush
