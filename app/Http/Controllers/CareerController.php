@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\Contact;
 use App\Mail\JobApplication;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -11,7 +10,6 @@ class CareerController extends Controller
 {
     private $cvFolder = 'files/cv/';
     private $cvPrefix = 'CV-';
-    private $mailTo = 'cfoley@myhst.com';
 
     public function index()
     {
@@ -32,14 +30,16 @@ class CareerController extends Controller
 
         if ($request->hasFile('cv')) {
             $file = $request->file('cv');
-            $file->move($this->cvFolder, $this->cvPrefix .now()->timestamp .'-' .$file->getClientOriginalName());
+            $fileName = $this->cvPrefix .now()->timestamp .'-' .$file->getClientOriginalName();
+            $file->move($this->cvFolder, $fileName);
         }
         else{
             $file = null;
         }
 
-        Mail::to($this->mailTo)
-            ->send(new JobApplication($request->all(), $file));
+        Mail::to(config('mail.mailto'))
+            ->send(new JobApplication($request->all(), $file, $fileName));
+            //->queue(new JobApplication($request->all(), $file));
 
         return redirect('/career');
     }
