@@ -26,6 +26,9 @@
                     <div class="firstCircle three translateOnMouseMove" data-animateSpeed="10"></div>
                     <div class="firstCircle fourt translateOnMouseMove" data-animateSpeed="5"></div>
                     <div class="firstCircle five translateOnMouseMove" data-animateSpeed="7"></div>
+                    <div class="firstButton playButton">
+                        <a id="playNow" href="#" class="button">Play now</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -376,10 +379,9 @@
 
 @push('custom-scripts')
     <script>
-        var video = document.getElementById('video');
-        document.addEventListener('mousemove', function() {
-            video.play();
+        let playBtn = document.getElementById('playNow').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('video').play();
         });
-        console.log(video);
     </script>
 @endpush
