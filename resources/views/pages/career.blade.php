@@ -208,7 +208,7 @@
                     phone: '',
                     zip: '',
                     info: '',
-                    file: '',
+                    file: null,
                     _token: "{{ csrf_token() }}",
                 },
             },
@@ -238,7 +238,8 @@
                         formData.append('phone', this.form.phone);
                         formData.append('zip', this.form.zip);
                         formData.append('info', this.form.info);
-                        formData.append('file', this.form.file);
+                        if(this.form.file !== null)
+                            formData.append('file', this.form.file);
                         formData.append('_token', "{{ csrf_token() }}");
 
                     axios.post('{{ route("careerApply") }}', formData, {
