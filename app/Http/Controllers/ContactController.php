@@ -18,18 +18,20 @@ class ContactController extends Controller
     public function send(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'nullable|string|max:255',
-            'lastName' => 'nullable|string|max:255',
+            //'name' => 'nullable|string|max:255',
+            //'lastName' => 'nullable|string|max:255',
             'email' => 'required|email',
             'phone' => 'required',
-            'zip' => 'nullable|regex:/\b\d{5}\b/',
-            'subjects' => 'nullable|array|between:1,10'
+            //'zip' => 'nullable|regex:/\b\d{5}\b/',
+            //'subjects' => 'nullable|array|between:1,10'
         ]);
 
-        Mail::to('cfoley@myhst.com')
-            ->send(new Contact($request->all()));
-        //->queue(new Contact($request->all()));
+        $res = Mail::to(config('mail.mailto'))
+            //->send(new Contact($request->all()));
+            ->queue(new Contact($request->all()));
 
-        return redirect('/contact');
+        return response()->json([
+            'status' => 'ok'
+        ], 200);
     }
 }
