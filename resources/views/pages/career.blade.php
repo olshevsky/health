@@ -145,9 +145,10 @@
             <form id="form" @submit="checkForm" action="{{ route('careerApply') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="innerFormGroup">
-                    <input type="text" name="name" v-model="form.name" placeholder="First Name">
+                    <input type="text" name="name" v-model="form.name" :class="[errors.name ? 'error' : '']" placeholder="First Name">
                     <input type="text" name="lastName" v-model="form.lastName" placeholder="Last Name">
                 </div>
+                <p v-if="errors.name" class="errorMessage">First name is required!</p>
                 <input type="email" name="email" v-model="form.email" :class="[errors.email ? 'error' : '']" placeholder="Email">
                 <p v-if="errors.email" class="errorMessage">Incorrect email adress!</p>
                 <input type="phone" name="phone" v-model="form.phone" :class="[errors.phone ? 'error' : '']"  placeholder="Phone Number">
@@ -219,6 +220,11 @@
                 checkForm: function(e){
                     e.preventDefault();
                     this.resetErrors();
+
+                    if (this.form.name.length < 1){
+                        this.errors.name = true;
+                        return;
+                    }
 
                     if (!this.validEmail(this.form.email)){
                         this.errors.email = true;

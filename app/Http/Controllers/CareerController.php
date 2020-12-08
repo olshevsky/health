@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\JobApplication;
+use App\Mail\JobApplication as JobApplicationMail;
+use App\Models\JobApplication;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -19,7 +20,7 @@ class CareerController extends Controller
     public function send(Request $request)
     {
         $validatedData = $request->validate([
-            //'name' => 'nullable|string|max:255',
+            'name' => 'required|string|max:255',
             //'lastName' => 'nullable|string|max:255',
             'email' => 'required|email',
             'phone' => 'required',
@@ -38,8 +39,18 @@ class CareerController extends Controller
             $fileName = null;
         }
 
+        $application = new JobApplication();
+        $application->first_name = $request->get('name');
+        $application->last_name = $request->get('lastName');
+        $application->email = $request->get('email');
+        $application->phone = $request->get('phone');
+        $application->zip_code = $request->get('zip');
+        $application->info = $request->get('info');
+        $application->file_path = $fileName;
+        $application->save();
+
         Mail::to(config('mail.mailto'))
-            ->send(new JobApplication($request->all(), $file, $fileName));
+            ->send(new JobApplicationMail($request->all(), $file, $fileName));
             //->queue(new JobApplication($request->all(), $file, $fileName));
 
         return response()->json([
