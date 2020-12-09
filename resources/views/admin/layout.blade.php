@@ -19,6 +19,10 @@
             padding: 5px 0 5px 20px;
         }
 
+        .navbar-header{
+            padding-right: 10px;
+        }
+
         /* Add a gray background color and some padding to the footer */
         footer {
             background-color: #f2f2f2;
@@ -36,7 +40,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{ url('/admin') }}" class="navbar-brand">
-                    <img src="images/logo.svg" height="40px" alt="logo.svg">
+                    <img src="images/logo_admin.svg" height="40px" alt="logo.svg">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">

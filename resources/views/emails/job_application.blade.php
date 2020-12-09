@@ -1,4 +1,8 @@
-<div>
+@extends('emails.layout')
+
+@section('title', 'New e-mail from Health Insurance Results')
+
+@section('content')
     <h1>New e-mail from Health Insurance Results job application form.</h1>
     @if ($name != '')
         <p>First name: {{ $name }}</p>
@@ -12,9 +16,9 @@
         <p>Zip code: {{ $zip }}</p>
     @endif
     @if ($info != '')
-        <p>Additional information:</p>
+        <p>
+            <strong>Additional information:</strong>
+        </p>
         <p>{{ $info }}</p>
     @endif
-</div>
-
-
+@endsection

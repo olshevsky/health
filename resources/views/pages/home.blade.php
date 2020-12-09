@@ -394,7 +394,6 @@
                 playBtn.innerHTML = 'Play now';
                 play = false;
             }
-
         });
     </script>
 @endpush

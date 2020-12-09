@@ -1,4 +1,8 @@
-<div>
+@extends('emails.layout')
+
+@section('title', 'New e-mail from Health Insurance Results')
+
+@section('content')
     <h1>New e-mail from Health Insurance Results contact form.</h1>
     @isset($name)
         <p>First name: {{ $name }}</p>
@@ -19,4 +23,4 @@
             @endforeach
         </ul>
     @endisset
-</div>
+@endsection

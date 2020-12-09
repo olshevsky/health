@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container-fluid bg-3 text-center" style="width: 80%;">
-    <h3 class="m-b">Job Applications</h3>
+    <h3 class="m-b" style="margin: 40px 0;">Job Applications</h3>
     <div class="row">
         <table class="table table-hover text-left">
             <thead>
