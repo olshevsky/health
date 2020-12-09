@@ -146,9 +146,10 @@
                 @csrf
                 <div class="innerFormGroup">
                     <input type="text" name="name" v-model="form.name" :class="[errors.name ? 'error' : '']" placeholder="First Name">
-                    <input type="text" name="lastName" v-model="form.lastName" placeholder="Last Name">
+                    <input type="text" name="lastName" v-model="form.lastName" :class="[errors.lastName ? 'error' : '']" placeholder="Last Name">
                 </div>
                 <p v-if="errors.name" class="errorMessage">First name is required!</p>
+                <p v-if="errors.lastName" class="errorMessage">Last name is required!</p>
                 <input type="email" name="email" v-model="form.email" :class="[errors.email ? 'error' : '']" placeholder="Email">
                 <p v-if="errors.email" class="errorMessage">Incorrect email adress!</p>
                 <input type="phone" name="phone" v-model="form.phone" :class="[errors.phone ? 'error' : '']"  placeholder="Phone Number">
@@ -197,6 +198,8 @@
             el: '#form',
             data: {
                 errors: {
+                    name: false,
+                    lastName: false,
                     email: false,
                     phone: false
                 },
@@ -220,21 +223,8 @@
                 checkForm: function(e){
                     e.preventDefault();
                     this.resetErrors();
-
-                    if (this.form.name.length < 1){
-                        this.errors.name = true;
+                    if (!this.validate())
                         return;
-                    }
-
-                    if (!this.validEmail(this.form.email)){
-                        this.errors.email = true;
-                        return;
-                    }
-
-                    if(!this.validPhone(this.form.phone)){
-                        this.errors.phone = true;
-                        return;
-                    }
 
                     let self = this;
                     let formData = new FormData();
@@ -263,6 +253,29 @@
                         .catch((error) => {
                             self.status = 'fail';
                         }).finally(() => {});
+                },
+                validate: function(){
+                    if (this.form.name.length < 1){
+                        this.errors.name = true;
+                        return false;
+                    }
+
+                    if (this.form.lastName.length < 1){
+                        this.errors.lastName = true;
+                        return false;
+                    }
+
+                    if (!this.validEmail(this.form.email)){
+                        this.errors.email = true;
+                        return false;
+                    }
+
+                    if(!this.validPhone(this.form.phone)){
+                        this.errors.phone = true;
+                        return false;
+                    }
+
+                    return true;
                 },
                 resetErrors: function() {
                     this.errors = {
