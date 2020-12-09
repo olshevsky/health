@@ -379,9 +379,22 @@
 
 @push('custom-scripts')
     <script>
-        let playBtn = document.getElementById('playNow').addEventListener('click', function (e) {
+        let play = false;
+        let video = document.getElementById('video');
+        let playBtn = document.getElementById('playNow')
+        playBtn.addEventListener('click', function (e) {
             e.preventDefault();
-            document.getElementById('video').play();
+            if(!play){
+                video.play();
+                playBtn.innerHTML = 'Pause';
+                play = true;
+            }
+            else{
+                video.pause();
+                playBtn.innerHTML = 'Play now';
+                play = false;
+            }
+
         });
     </script>
 @endpush
