@@ -5,14 +5,14 @@
 @section('content')
     <section class="innerFirst">
         <div class="innerFirstImage">
-            <img src="images/career_image.jpg" alt="">
+            <img src="/public/images/career_image.jpg" alt="">
         </div>
         <h1 class="innerFirstTitle">Career</h1>
     </section>
     <section class="innerVideo">
         <div class="innerVideoTop">
             <div class="left">
-                <img src="/images/footer_logo.png" width="100%" alt="">
+                <img src="/public/images/footer_logo.png" width="100%" alt="">
             </div>
             <div class="right">Welcome<br />
                 to your <br />
@@ -44,7 +44,7 @@
                         Your Success
                     </div>
                     <div class="thirdImage">
-                        <img src="/images/career1.svg" alt="">
+                        <img src="/public/images/career1.svg" alt="">
                     </div>
                     <div class="thirdText innerPage">
                         Want a change in 2021? Ready to be your own boss and enjoy the flexibility to live life the way you choose? Do you want to work your own schedule and get paid what you feel you are worthwhile helping others?<br /> <br />
@@ -61,7 +61,7 @@
                         Meet our Team
                     </div>
                     <div class="thirdImage">
-                        <img src="/images/career2.svg" alt="">
+                        <img src="/public/images/career2.svg" alt="">
                     </div>
                     <div class="thirdText innerPage">
                         We’re Compass Health Consultants in partnership with Healthcare Solutions Team.<br /> <br />
@@ -89,7 +89,7 @@
                         The Fun Stuff
                     </div>
                     <div class="thirdImage">
-                        <img src="/images/career3.svg" alt="">
+                        <img src="/public/images/career3.svg" alt="">
                     </div>
                     <div class="thirdText innerPage">
                         "America's #1 Health Insurance Agency 3 Years Running"- Assurant Health<br />
@@ -161,7 +161,7 @@
                         <div class="title">Upload your CV</div>
                         <label class="upload">
                             <div class="image">
-                                <img src="/images/upload.svg" width="100%" alt="">
+                                <img src="/public/images/upload.svg" width="100%" alt="">
                             </div>
                             <div class="text">Drop your files
                                 here</div>

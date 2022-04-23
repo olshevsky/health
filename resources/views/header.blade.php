@@ -1,7 +1,7 @@
 <header class="header">
     <div class="headerIn center">
         <a href="{{ route('home') }}" class="headerLogo">
-            <img src="images/logo.svg" width="100%" alt="logo.svg">
+            <img src="/public/images/logo.svg" width="100%" alt="logo.svg">
         </a>
         <div class="headerOpener"></div>
         <nav class="headerMenu">

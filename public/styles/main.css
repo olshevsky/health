@@ -2117,3 +2117,31 @@ body {
   transform: rotate(180deg) translateX(-50%);
   left: auto;
   right: 0; }
+
+
+
+  .stepModal {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10vh 10vw; 
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .stepModalIn {
+    background: #fff;
+    overflow: auto;
+    max-height: 100%;
+  }
+  .strife-frame {width: 100% !important;}
+  .stepModal.isOpened {
+    opacity: 1;
+    visibility: visible;
+  }

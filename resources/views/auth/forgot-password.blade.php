@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <img src="images/logo.svg" width="200px" alt="logo.svg">
+            <img src="/public/images/logo.svg" width="200px" alt="logo.svg">
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">

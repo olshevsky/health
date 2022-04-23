@@ -5,7 +5,7 @@
 @section('content')
     <section class="innerFirst">
         <div class="innerFirstImage">
-            <img src="images/contact_image.jpg" alt="">
+            <img src="/public/images/contact_image.jpg" alt="">
         </div>
         <h1 class="innerFirstTitle">Contact us</h1>
     </section>
@@ -70,7 +70,7 @@
             <div class="innerThirdSubtitle text">We prefer a simple 2 step online / telephone based strategy to determine our best health plan recommendations for your family. And our service is FREE to you. </div>
             <div class="innerThirdItems">
                 <div class="innerThirdLine translateOnMouseMove" data-animateSpeed="50">
-                    <img src="/images/line.svg" alt="">
+                    <img src="/public/images/line.svg" alt="">
                 </div>
                 <div class="innerThirdItem">
                     <div class="left translateOnMouseMove" data-animateSpeed="50">

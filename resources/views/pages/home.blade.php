@@ -20,7 +20,7 @@
             <div class="firstRight">
                 <div class="firstCircles">
                     <div class="firstCircle one translateOnMouseMove" data-animateSpeed="20">
-                        <video id="video" width="100%" src="/media/intro.m4v" type="video/mp4"></video>
+                        <video id="video" width="100%" src="/public/media/intro.m4v" type="video/mp4"></video>
                     </div>
                     <div class="firstCircle two translateOnMouseMove" data-animateSpeed="25"></div>
                     <div class="firstCircle three translateOnMouseMove" data-animateSpeed="10"></div>
@@ -63,33 +63,38 @@
                 <a href="https://my.timetrade.com/book/5QZLL" target="_blank" class="thirdItem rotateOnMouseMove"
                    data-animateSpeed="100">
                     <div class="thirdImage">
-                        <img src="/images/heart.svg" alt="">
+                        <img src="/public/images/heart.svg" alt="">
                     </div>
                     <div class="thirdItemTitle">
                         Health <br/>Insurance
                     </div>
                     <span class="button thirdButton">Book now</span>
                 </a>
-                <a href="https://my.timetrade.com/book/RV5QS" target="_blank" class="thirdItem rotateOnMouseMove"
+                <a href="https://my.timetrade.com/book/5QZLL" target="_blank" class="thirdItem rotateOnMouseMove"
                    data-animateSpeed="100">
                     <div class="thirdImage">
-                        <img src="/images/medicaments.svg" alt="">
+                        <img src="/public/images/medicaments.svg" alt="">
                     </div>
                     <div class="thirdItemTitle">
                         Medicare <br/>Supplements
                     </div>
                     <span class="button thirdButton">Book now</span>
                 </a>
-                <a href="https://my.timetrade.com/book/5QZLL" target="_blank" class="thirdItem rotateOnMouseMove"
+                <a href="https://app.back9ins.com/apply/ChristinaFoley" target="_blank" id="openStepModal" class="thirdItem rotateOnMouseMove"
                    data-animateSpeed="100">
                     <div class="thirdImage">
-                        <img src="/images/heart2.svg" alt="">
+                        <img src="/public/images/heart2.svg" alt="">
                     </div>
                     <div class="thirdItemTitle">
                         Term Life <br/>Insurance
                     </div>
                     <span class="button thirdButton">Book now</span>
                 </a>
+            </div>
+            <div class="stepModal">
+                <div class="stepModalIn">
+                    <div id="container-id"></div><div><script id="strife" src="https://strife.back9ins.com/production/strife.js" data-strife-key="p2Ogg6udf--ZzDg1" data-strife-container-id="container-id"></script></div>
+                </div>
             </div>
         </div>
     </section>
@@ -112,143 +117,143 @@
                         <div class="marquee__inner" aria-hidden="true">
                             <a href="https://www.aetna.com/individuals-families.html" target="_blank"
                                class="fourthSliderItem">
-                                <img src="images/seventh1.png" alt="">
+                                <img src="/public/images/seventh1.png" alt="">
                             </a>
                             <a href="https://www.ameritas.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh2.png" alt="">
+                                <img src="/public/images/seventh2.png" alt="">
                             </a>
                             <a href="https://www.bcbs.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh3.png" alt="">
+                                <img src="/public/images/seventh3.png" alt="">
                             </a>
                             <a href="https://www.uhc.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh4.png" alt="">
+                                <img src="/public/images/seventh4.png" alt="">
                             </a>
                             <a href="https://www.imglobal.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh5.png" alt="">
+                                <img src="/public/images/seventh5.png" alt="">
                             </a>
                             <a href="https://www.manhattanlife.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh6.png" alt="">
+                                <img src="/public/images/seventh6.png" alt="">
                             </a>
                             <a href="https://www.mutualofomaha.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh7.png" alt="">
+                                <img src="/public/images/seventh7.png" alt="">
                             </a>
                             <a href="https://nationalgeneral.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh8.png" alt="">
+                                <img src="/public/images/seventh8.png" alt="">
                             </a>
                             <a href="https://www.pivothealth.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh9.png" alt="">
+                                <img src="/public/images/seventh9.png" alt="">
                             </a>
                             <a href="https://www.aetna.com/individuals-families.html" target="_blank"
                                class="fourthSliderItem">
-                                <img src="images/seventh1.png" alt="">
+                                <img src="/public/images/seventh1.png" alt="">
                             </a>
                             <a href="https://www.ameritas.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh2.png" alt="">
+                                <img src="/public/images/seventh2.png" alt="">
                             </a>
                             <a href="https://www.bcbs.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh3.png" alt="">
+                                <img src="/public/images/seventh3.png" alt="">
                             </a>
                             <a href="https://www.uhc.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh4.png" alt="">
+                                <img src="/public/images/seventh4.png" alt="">
                             </a>
                             <a href="https://www.imglobal.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh5.png" alt="">
+                                <img src="/public/images/seventh5.png" alt="">
                             </a>
                             <a href="https://www.manhattanlife.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh6.png" alt="">
+                                <img src="/public/images/seventh6.png" alt="">
                             </a>
                             <a href="https://www.mutualofomaha.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh7.png" alt="">
+                                <img src="/public/images/seventh7.png" alt="">
                             </a>
                             <a href="https://nationalgeneral.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh8.png" alt="">
+                                <img src="/public/images/seventh8.png" alt="">
                             </a>
                             <a href="https://www.pivothealth.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh9.png" alt="">
+                                <img src="/public/images/seventh9.png" alt="">
                             </a>
                             <a href="https://www.aetna.com/individuals-families.html" target="_blank"
                                class="fourthSliderItem">
-                                <img src="images/seventh1.png" alt="">
+                                <img src="/public/images/seventh1.png" alt="">
                             </a>
                             <a href="https://www.ameritas.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh2.png" alt="">
+                                <img src="/public/images/seventh2.png" alt="">
                             </a>
                             <a href="https://www.bcbs.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh3.png" alt="">
+                                <img src="/public/images/seventh3.png" alt="">
                             </a>
                             <a href="https://www.uhc.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh4.png" alt="">
+                                <img src="/public/images/seventh4.png" alt="">
                             </a>
                             <a href="https://www.imglobal.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh5.png" alt="">
+                                <img src="/public/images/seventh5.png" alt="">
                             </a>
                             <a href="https://www.manhattanlife.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh6.png" alt="">
+                                <img src="/public/images/seventh6.png" alt="">
                             </a>
                             <a href="https://www.mutualofomaha.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh7.png" alt="">
+                                <img src="/public/images/seventh7.png" alt="">
                             </a>
                             <a href="https://nationalgeneral.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh8.png" alt="">
+                                <img src="/public/images/seventh8.png" alt="">
                             </a>
                             <a href="https://www.pivothealth.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh9.png" alt="">
+                                <img src="/public/images/seventh9.png" alt="">
                             </a>
                             <a href="https://www.aetna.com/individuals-families.html" target="_blank"
                                class="fourthSliderItem">
-                                <img src="images/seventh1.png" alt="">
+                                <img src="/public/images/seventh1.png" alt="">
                             </a>
                             <a href="https://www.ameritas.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh2.png" alt="">
+                                <img src="/public/images/seventh2.png" alt="">
                             </a>
                             <a href="https://www.bcbs.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh3.png" alt="">
+                                <img src="/public/images/seventh3.png" alt="">
                             </a>
                             <a href="https://www.uhc.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh4.png" alt="">
+                                <img src="/public/images/seventh4.png" alt="">
                             </a>
                             <a href="https://www.imglobal.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh5.png" alt="">
+                                <img src="/public/images/seventh5.png" alt="">
                             </a>
                             <a href="https://www.manhattanlife.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh6.png" alt="">
+                                <img src="/public/images/seventh6.png" alt="">
                             </a>
                             <a href="https://www.mutualofomaha.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh7.png" alt="">
+                                <img src="/public/images/seventh7.png" alt="">
                             </a>
                             <a href="https://nationalgeneral.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh8.png" alt="">
+                                <img src="/public/images/seventh8.png" alt="">
                             </a>
                             <a href="https://www.pivothealth.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh9.png" alt="">
+                                <img src="/public/images/seventh9.png" alt="">
                             </a>
                             <a href="https://www.aetna.com/individuals-families.html" target="_blank"
                                class="fourthSliderItem">
-                                <img src="images/seventh1.png" alt="">
+                                <img src="/public/images/seventh1.png" alt="">
                             </a>
                             <a href="https://www.ameritas.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh2.png" alt="">
+                                <img src="/public/images/seventh2.png" alt="">
                             </a>
                             <a href="https://www.bcbs.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh3.png" alt="">
+                                <img src="/public/images/seventh3.png" alt="">
                             </a>
                             <a href="https://www.uhc.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh4.png" alt="">
+                                <img src="/public/images/seventh4.png" alt="">
                             </a>
                             <a href="https://www.imglobal.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh5.png" alt="">
+                                <img src="/public/images/seventh5.png" alt="">
                             </a>
                             <a href="https://www.manhattanlife.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh6.png" alt="">
+                                <img src="/public/images/seventh6.png" alt="">
                             </a>
                             <a href="https://www.mutualofomaha.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh7.png" alt="">
+                                <img src="/public/images/seventh7.png" alt="">
                             </a>
                             <a href="https://nationalgeneral.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh8.png" alt="">
+                                <img src="/public/images/seventh8.png" alt="">
                             </a>
                             <a href="https://www.pivothealth.com/" target="_blank" class="fourthSliderItem">
-                                <img src="images/seventh9.png" alt="">
+                                <img src="/public/images/seventh9.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -379,6 +384,22 @@
 
 @push('custom-scripts')
     <script>
+        $('#openStepModal').click(function(e) {
+            e.preventDefault();
+            $('.stepModal').addClass('isOpened');
+        });
+        $(document).on('click', function(event){
+            if( $(event.target).closest('#openStepModal').length || $(event.target).closest('.stepModalIn').length ) {
+                return;
+            }
+            $('.stepModal').removeClass('isOpened');
+        });
+        $(document).on('keyup', function(keyUp){
+	    if (keyUp.keyCode 
+	    	== 27) {
+                $('.stepModal').removeClass('isOpened');
+            }
+        });
         let play = false;
         let video = document.getElementById('video');
         let playBtn = document.getElementById('playNow')

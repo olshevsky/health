@@ -139,10 +139,10 @@
 <div class="wrapper">
     <header>
         <div class="content">
-            <img class="logo" src="images/mail/logo.png" height="72" alt="logo">
-            <img class="elipse2" src="/images/mail/ellipse2.png" />
+            <img class="logo" src="/public/images/mail/logo.png" height="72" alt="logo">
+            <img class="elipse2" src="/public/images/mail/ellipse2.png" />
         </div>
-        <img class="elipse1" src="/images/mail/ellipse1.png" />
+        <img class="elipse1" src="/public/images/mail/ellipse1.png" />
     </header>
     <section>
         <div class="content">
@@ -150,20 +150,20 @@
         </div>
     </section>
     <footer>
-        <img class="elipse3" src="/images/mail/ellipse3.png"/>
-        <img class="elipse4" src="/images/mail/ellipse4.png"/>
+        <img class="elipse3" src="/public/images/mail/ellipse3.png"/>
+        <img class="elipse4" src="/public/images/mail/ellipse4.png"/>
         <div class="content">
             <div class="fleft" style="padding-right: 40px;">
                 <ul>
                     <li>
                         <div class="icon">
-                            <img src="/images/mail.svg" alt="">
+                            <img src="/public/images/mail.svg" alt="">
                         </div>
                         <a href="mailto:cfoley@myhst.com" class="footerText">cfoley@myhst.com</a>
                     </li>
                     <li>
                         <div class="icon">
-                            <img src="/images/phone-call.svg" alt="">
+                            <img src="/public/images/phone-call.svg" alt="">
                         </div>
                         <a href="tel:3146244363" class="footerText">Office: 314-624-4363</a>
                     </li>
@@ -175,13 +175,13 @@
             </div>
             <div class="socials fleft">
                 <a href="https://m.facebook.com/1001AffordableOptions/" target="_blank">
-                    <img src="/images/mail/icon1.png" width="45" alt="">
+                    <img src="/public/images/mail/icon1.png" width="45" alt="">
                 </a>
                 <a href="https://twitter.com/topayitforward?lang=en" target="_blank">
-                    <img src="/images/mail/icon2.png" width="45" alt="">
+                    <img src="/public/images/mail/icon2.png" width="45" alt="">
                 </a>
                 <a href="https://www.linkedin.com/in/christinafoley1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BvXNL58yYS%2FWbErvWwOjt5Q%3D%3D" target="_blank">
-                    <img src="/images/mail/icon3.png" width="45" alt="">
+                    <img src="/public/images/mail/icon3.png" width="45" alt="">
                 </a>
             </div>
             <div class="clear"></div>

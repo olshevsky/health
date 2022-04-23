@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{ url('/admin') }}" class="navbar-brand">
-                    <img src="images/logo_admin.svg" height="40px" alt="logo.svg">
+                    <img src="/public/images/logo_admin.svg" height="40px" alt="logo.svg">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
